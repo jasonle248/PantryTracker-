@@ -183,9 +183,16 @@ return (
             <Typography variant={'h3'} color={'#333'} textAlign={'center'}>
               {name.charAt(0).toUpperCase() + name.slice(1)}
             </Typography>
+            <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexGrow={1}
+            > 
             <Typography variant={'h3'} color={'#333'} textAlign={'center'}>
               Quantity: {quantity}
             </Typography>
+            </Box>
             <Stack direction = "row" spacing = {2}>
             <Button variant="contained" onClick={() => addItem(name)}>
               Add
@@ -219,10 +226,10 @@ return (
     paddingX={5}
     
   >
-    <Typography variant={'h3'} color={'#333'} textAlign={'center'}>
+    <Typography variant={'h3'} color={'#333'} textAlign={'center'} flexGrow={1} textOverflow="ellipsis" overflow="hidden" whiteSpace="nowrap">
       {name.charAt(0).toUpperCase() + name.slice(1)}
     </Typography>
-    <Typography variant={'h3'} color={'#333'} textAlign={'center'}>
+    <Typography variant={'h3'} color={'#333'} textAlign={'center'}flexGrow={1}>
       Quantity: {quantity}
     </Typography>
     <Stack direction="row" spacing={2}>
